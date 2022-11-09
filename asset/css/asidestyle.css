@@ -1,0 +1,61 @@
+aside{
+    width: 20%;
+    height: 100vh;
+    background-color: #323439;
+    /* min-width: 200px; */
+}
+.logo{
+    width:  300px;
+    height: 80px;
+    margin-left: 20px;
+    margin-top: 36px;
+}
+.logo-img{
+    width: 240px;
+    height: 55px;
+
+}
+
+.nav-bar{
+    margin-left: 48px;
+}
+.first-part{
+    margin-bottom: 180px;
+}
+.nav-bar a{
+    color:#b3b1b1c9;
+    display: block;
+    font-size: 19px;
+    padding: 0.8rem;
+    font-weight: 300;
+    
+}
+.nav-bar a:hover{
+    color : #e1e1e1d6;
+}
+.fa-solid, .fa-regular {
+    font-size: 22px;
+}
+.dot-container{
+    position: relative;
+}
+.red-dot{
+    background-color: rgb(255, 87, 87);
+    border-radius: 50%;
+    width : 15px;
+    height: 15px;
+    font-size: 12px;
+    color: aliceblue;
+    position: absolute;
+    text-align: center;
+    top:16%;
+    left:9%;
+}
+
+.second-part p {
+    font-size: 13px;
+    margin-left: 35px;
+}
+a:hover , a:active{
+    color: #f3f3f3c9;
+}
