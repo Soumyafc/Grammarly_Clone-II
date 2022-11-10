@@ -1,0 +1,121 @@
+<link rel="stylesheet" href="/css/texteditstyle.css">
+
+<div class="container">
+    <div class="options">
+        
+        <button id="bold" class="option-button format">
+            <i class="fa-solid fa-bold"></i>
+        </button>
+
+        <button id="italic" class="option-button format">
+            <i class="fa-solid fa-italic"></i>
+        </button>
+
+        <button id="underline" class="option-button format">
+            <i class="fa-solid fa-underline"></i>
+
+        </button>
+
+        <button id="strikethrough" class="option-button format">
+            <i class="fa-solid fa-strikethrough"></i>
+        </button>
+
+        <button id="superscript" class="option-button format">
+            <i class="fa-solid fa-superscript"></i>
+        </button>
+
+        <button id="subscript" class="option-button format">
+            <i class="fa-solid fa-subscript"></i>
+        </button>
+
+        <!--List-->
+        <button id="insertOrderedList" class="option-button">
+            <i class="fa-solid fa-list-ol"></i>
+        </button>
+
+        <button id="insertUnorderedList" class="option-button">
+            <i class="fa-solid fa-list-ul"></i>
+        </button>
+
+        <!--undo/redo-->
+        <button id="uno" class="option-button">
+            <i class="fa-solid fa-rotate-left"></i>
+        </button>
+
+        <button id="redo" class="option-button">
+            <i class="fa-solid fa-rotate-right"></i>
+        </button>
+
+        <!--link-->
+        <button id="createLink" class="adv-option-button">
+           <i class="fa-solid fa-link"></i>
+        </button>
+
+        <button id="unlink" class="option-button">
+           <i class="fa-solid fa-link-slash"></i>
+        </button>
+
+        <!--alignment-->
+        <button id = "justifyLeft" class="option-button align">
+            <i class="fa-solid fa-align-left"></i>
+        </button>
+        <button id = "justifyCenter" class="option-button align">
+           <i class="fa-solid fa-align-center"></i>
+        </button>
+
+        <button id = "justifyRight" class="option-button align">
+           <i class="fa-solid fa-align-right"></i>
+        </button>
+
+        <button id = "justifyFull" class="option-button align">
+          <i class="fa-solid fa-align-justify"></i>
+        </button>
+
+        <button id = "indent" class="option-button spacing">
+          <i class="fa-solid fa-indent"></i>
+        </button>
+
+        <button id = "outdent" class="option-button spacing">
+          <i class="fa-solid fa-outdent"></i>
+        </button>
+
+        <!--heading-->
+        <select id="formatBlock" class="adv-option-button">
+            <option value="H1">H1</option>
+            <option value="H2">H2</option>
+            <option value="H3">H3</option>
+            <option value="H4">H4</option>
+            <option value="H5">H5</option>
+            <option value="H6">H6</option>
+        </select>
+
+        <!--Font-->
+        <select  id="fontName" class = "adv-option-button">
+            
+        </select>
+
+        <select  id="fontSize" class = "adv-option-button">
+
+        </select>
+
+        <!--color-->
+        <div class="input-wrapper">
+            <input type="color" id = "foreColor" class="adv-option-button">
+            <label for="foreColor">Font Color</label>
+        </div>
+
+        <div class="input-wrapper">
+            <input type="color" id = "backColor" class="adv-option-button">
+            <label for="backColor">Highlight Color</label>
+        </div>
+    </div>
+
+    <div id = "text-input" >
+        <grammarly-editor-plugin>
+            <textarea class = "textarea"  placeholder="Write here..." contenteditable="true"></textarea>
+        </grammarly-editor-plugin>
+    </div>
+</div>
+
+<script src = "/js/texteditscript.js"></script>
+<script src="https://unpkg.com/@grammarly/editor-sdk?clientId=client_N7kiYdtdh1ocS8RQSm8SA2"></script>

@@ -1,19 +1,30 @@
 module.exports.home = function (req, res)
 {
     return res.render('home', {
-        title:'home'
+        title: 'home',
+        layout: "layout"
     });
 }
 module.exports.app = function (req, res)
 {
     return res.render('app', {
-        title:'apps'
+        title: 'apps',
+        layout: "layout"
     });
 }
 
 module.exports.trash = function (req, res)
 {
     return res.render('trash', {
-        title:'trash'
+        title: 'trash',
+        layout: "layout"
     });
+}
+
+module.exports.texteditor = function (req, res)
+{
+    return res.render('texteditor', {
+        title: "texteditor",
+        layout: "blank-layout"
+    })
 }
