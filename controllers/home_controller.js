@@ -23,7 +23,7 @@ module.exports.trash = function (req, res)
 
 module.exports.texteditor = function (req, res)
 {
-    return res.render('texteditor', {
+    return res.render('newtexteditor', {
         title: "texteditor",
         layout: "blank-layout"
     })

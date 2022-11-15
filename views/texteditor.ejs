@@ -1,86 +1,114 @@
 <link rel="stylesheet" href="/css/texteditstyle.css">
 
+<!-- <div class = "nav">
+    <ul>
+        <li>
+            <a href="">close</a>
+        </li>
+    </ul>
+</div> -->
+
+
 <div class="container">
     <div class="options">
         
         <button id="bold" class="option-button format">
+            <span class = "details hidden long-text"><b>Bold Text</b></span>
             <i class="fa-solid fa-bold"></i>
         </button>
 
         <button id="italic" class="option-button format">
+            <span class = "details hidden long-text"><i>Italic Text</i></span>
             <i class="fa-solid fa-italic"></i>
         </button>
 
         <button id="underline" class="option-button format">
+            <span class = "details hidden big-long-text"><u>Underline Text</u></span>
             <i class="fa-solid fa-underline"></i>
 
         </button>
 
         <button id="strikethrough" class="option-button format">
+            <span class = "details hidden big-long-text"><del>Strike Through</del></span>
             <i class="fa-solid fa-strikethrough"></i>
         </button>
 
         <button id="superscript" class="option-button format">
+            <span class = "details hidden long-text">superscript</span>
             <i class="fa-solid fa-superscript"></i>
         </button>
 
         <button id="subscript" class="option-button format">
+            <span class = "details hidden">subscript</span>
             <i class="fa-solid fa-subscript"></i>
         </button>
 
         <!--List-->
         <button id="insertOrderedList" class="option-button">
+            <span class = "details hidden long-text">Ordered List</span>
             <i class="fa-solid fa-list-ol"></i>
         </button>
 
         <button id="insertUnorderedList" class="option-button">
+            <span class = "details hidden big-long-text">Unordered List</span>
             <i class="fa-solid fa-list-ul"></i>
         </button>
 
         <!--undo/redo-->
         <button id="uno" class="option-button">
+            <span class = "details hidden">Undo</span>
             <i class="fa-solid fa-rotate-left"></i>
         </button>
 
         <button id="redo" class="option-button">
+            <span class = "details hidden">Redo</span>
             <i class="fa-solid fa-rotate-right"></i>
         </button>
 
         <!--link-->
         <button id="createLink" class="adv-option-button">
+            <span class = "details hidden long-text">Create Link</span>
            <i class="fa-solid fa-link"></i>
         </button>
 
         <button id="unlink" class="option-button">
+            <span class = "details hidden">Unlink</span>
            <i class="fa-solid fa-link-slash"></i>
         </button>
 
         <!--alignment-->
         <button id = "justifyLeft" class="option-button align">
+            <span class = "details hidden long-text">Align left</span>
             <i class="fa-solid fa-align-left"></i>
         </button>
         <button id = "justifyCenter" class="option-button align">
+            <span class = "details hidden long-text">Align center</span>
            <i class="fa-solid fa-align-center"></i>
         </button>
 
         <button id = "justifyRight" class="option-button align">
+            <span class = "details hidden long-text">Align Right</span>
            <i class="fa-solid fa-align-right"></i>
         </button>
 
         <button id = "justifyFull" class="option-button align">
+            <span class = "details hidden long-text">Align Full</span>
           <i class="fa-solid fa-align-justify"></i>
         </button>
 
         <button id = "indent" class="option-button spacing">
+            <span class = "details hidden">Indent</span>
           <i class="fa-solid fa-indent"></i>
         </button>
 
         <button id = "outdent" class="option-button spacing">
+            <span class = "details hidden">Outdent</span>
           <i class="fa-solid fa-outdent"></i>
         </button>
 
         <!--heading-->
         <select id="formatBlock" class="adv-option-button">
+          
             <option value="H1">H1</option>
             <option value="H2">H2</option>
             <option value="H3">H3</option>
@@ -89,14 +117,7 @@
             <option value="H6">H6</option>
         </select>
 
-        <!--Font-->
-        <select  id="fontName" class = "adv-option-button">
-            
-        </select>
-
-        <select  id="fontSize" class = "adv-option-button">
-
-        </select>
+       
 
         <!--color-->
         <div class="input-wrapper">
@@ -108,14 +129,28 @@
             <input type="color" id = "backColor" class="adv-option-button">
             <label for="backColor">Highlight Color</label>
         </div>
+        <div class="file-upload">
+                <input class = "file-upload_input" type="file" id = "myFile" name = "myFile">
+                <button type = "button" class = "file-upload_button">Upload</button>
+        </div>
     </div>
-
-    <div id = "text-input" >
-        <grammarly-editor-plugin>
-            <textarea class = "textarea"  placeholder="Write here..." contenteditable="true"></textarea>
-        </grammarly-editor-plugin>
+    <form action="/texteditor/save-document" method="post">
+    <input type="text" placeholder="Untitled Document"  id = "document-title" class = "document-title" name = "title">
+    <grammarly-editor-plugin>
+    <textarea name="document" id="text-input" contenteditable="true"  ></textarea>
+    <!-- <div id = "" >
+      
+    </div> -->
+    </grammarly-editor-plugin>
+    <button type="submit" class = "save-btn"> Save </button>
+    </form>
+    <div class="char-count">
+        0 word(s)
     </div>
+   
 </div>
 
+
 <script src = "/js/texteditscript.js"></script>
+
 <script src="https://unpkg.com/@grammarly/editor-sdk?clientId=client_N7kiYdtdh1ocS8RQSm8SA2"></script>

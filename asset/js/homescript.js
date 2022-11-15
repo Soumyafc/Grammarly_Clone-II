@@ -1,4 +1,4 @@
-console.log("hello");
+//console.log("hello");
 let card = document.getElementById("two");
 let card1 = document.getElementById("three");
 let downloadIcon = document.getElementById("down-ico");

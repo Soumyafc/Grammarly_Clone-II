@@ -2,28 +2,31 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 body{
     background-color: #338cf4;
+    overflow-y: auto;
 
 }
 .container{
     background-color: #fff;
-    width: 90vmin;
+    width: 90%;
     padding: 50px 30px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left : 50%;
-    top : 50%;
+    position: relative;
+    margin-left: 5.5%;
+    margin-top: 5%;
     border-radius: 10px;
     box-shadow: 0 25px 50px rgba(7, 20,35,0.2);
+    
 
 }
 .options{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap:15px
+    gap:15px;
+   
 }
 
 button{
@@ -36,7 +39,7 @@ button{
     background-color: #fff;
     outline: none;
     color: #020929;
-    
+    cursor: pointer;
 }
 select{
     padding: 7px;
@@ -79,8 +82,86 @@ input[type="color"]::-moz-color-swatch{
     border: 1px solid #ddd;
     padding: 20px;
     height: 50vh;
+    font-weight: 400;
+   
 }
 
 .active{
     background-color: #cedcff;
+}
+.option-button, .adv-option-button{
+    position: relative;
+}
+.details{
+    width: auto;
+    position: absolute;
+    background-color: rgb(66, 66, 66);
+    color: rgb(255, 249, 249);
+    top:-120%;
+    right : -106%;
+    padding: 6px 6px;
+    width:80px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 7px;
+    z-index: 1;
+}
+.hidden{
+    display: none;
+}
+.long-text{
+    width: 120px;
+    right:-155%;
+}
+.big-long-text{
+    width : 150px;
+
+}
+/* .input-placeholder{
+    font-family: sans-serif;
+    font-size: 18px;
+    color: rgb(181, 181, 181);
+
+} */
+.document-title{
+    position: absolute;
+    top:-10%;
+    left:0%;
+    padding: 8px 8px;
+    outline: none;
+    border:none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.char-count{
+    font-size: 16px;
+    position: absolute;
+    top:92%;
+    left:2.5%;
+    padding: 3px 3px;
+    border: 0.5px solid rgb(183, 183, 183);
+    color: rgb(155, 155, 155);
+}
+.file-upload_input{
+    display: none;
+}
+.file-upload_button{
+    appearance: none;
+    background-color:#338cf4;
+    border: none;
+    color:#ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    outline: none;
+   padding: 5px 10px;
+   width: auto;
+    
+}
+
+
+.file-upload_button:hover, .file-upload_button:active{
+    color: #338cf4;
+    background-color: #fff;
+    border: 1px solid #338cf4;
 }

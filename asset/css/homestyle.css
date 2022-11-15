@@ -85,7 +85,35 @@
     margin-top: 54px;
   
 }
-.other-sec{
+.file-upload{
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+
+}
+.file-upload_input{
+    display: none;
+}
+.file-upload_button{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    color:#6d6d6d;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+    outline: none;
+    margin-left: 32px;
+    margin-top: 13px;
+    
+}
+.file-upload_button i{
+    color: rgba(255, 87, 87, 0.723);
+}
+.file-upload_button:hover, .file-upload_button:active{
+    color: rgba(255, 87, 87, 0.963);
+}
+/* .other-sec{
     text-align: center;
    
 }
@@ -98,7 +126,7 @@
 }
 .other-sec a:hover{
     color: rgba(255, 87, 87, 0.884);
-}
+} */
 .first-sec{
     display: flex;
     flex-direction: column;
