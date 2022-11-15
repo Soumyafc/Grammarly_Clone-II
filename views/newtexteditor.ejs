@@ -1,7 +1,10 @@
 <link rel="stylesheet" href="/css/newtexteditstyle.css">
-
+<div class="sidebar-button">
+    <i class="fa-solid fa-bars close-toggle"></i><i class="fa-sharp fa-solid fa-arrow-right"></i>
+    <div class = "details menu" id ="menu-details"> Open menu</div>
+</div>
 <div class="dark-mode">
-    <span class="details hidden">switch to dark mode</span>
+    <span class="details hidden" id = "mode-details">switch to dark mode</span>
    <i class="fa-solid fa-sun hidden"></i>
    <i class="fa-solid fa-moon "></i>
 </div>
@@ -39,12 +42,22 @@
         <button class="editor-settings"><i class="fa-solid fa-gear"></i> &nbsp; &nbsp; Editor settings</button>
     </div>
     <div class="edit-sec-two tab add-border">
-        <button class="cut"> &nbsp; &nbsp; Upgrade to premium</button>
-        <button class="copy"><i class="fa-solid fa-copy "></i> &nbsp; &nbsp; Copy</button>
-        <button class="paste"><i class="fa-solid fa-paste "></i> &nbsp; &nbsp; Paste</button>
-        <button class="select"> &nbsp; &nbsp; &nbsp; &nbsp; Select all</button>
+        <div class="account-details"></div>
+        <button class="premium pos"><p class="btn-details">Upgrade to premium</p><img src="/images/diamond.png" alt="" class="diamond-img"></button>
+
+        <button class="lang pos"><p class="btn-details">Language preference</p><img src="/images/united-states.png" alt="" class = "lang-img"><i class="fa-solid fa-arrow-right"></i>
+       
+        </button>
+        
+       
+        
+        <button class="subscription"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Subscription</button>
+        <button class="select"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sign out</button>
     </div>
 </div>
+<!-- <div class="lang-options">
+            <button class="lang pos"><p class="btn-details">American English</p><img src="/images/united-states.png" alt="" class = "lang-img"></i> </button>
+</div> -->
 <div class="section">
     <div class="row">
         <div class="col">
@@ -89,6 +102,7 @@
             <textarea name="document" id="textarea" placeholder="Write here..."></textarea>
             </grammarly-editor-plugin>
             <button type = "submit" id="btn-save">Save</button>
+            <div class="word-count" id ="word-count">0 Word(s)</div>
             </form>
         </div>
     </div>

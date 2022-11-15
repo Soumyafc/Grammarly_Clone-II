@@ -1,6 +1,40 @@
 
 const textarea = document.getElementById("textarea");
 let inputNum = document.getElementById("font-size");
+let premiumBtns = document.querySelectorAll(".pos");
+let closeBtn = document.querySelector(".close");
+let sideBar = document.querySelector(".sidebar");
+let openBtn = document.querySelector(".sidebar-button");
+let menuDetails = document.querySelector("#menu-details");
+
+closeBtn.addEventListener("click", () => {
+    sideBar.style.left = "-40%";
+    openBtn.style.width = "60px";
+});
+openBtn.addEventListener("mouseover", () => {
+    menuDetails.style.display = "block";
+});
+openBtn.addEventListener("mouseout", () => {
+    menuDetails.style.display = "none";
+});
+openBtn.addEventListener("click", () => {
+    sideBar.style.left = "0%";
+    openBtn.style.width = "100px";
+});
+premiumBtns.forEach((btn) => {
+    btn.addEventListener('mouseover', () => {
+        let pTag = btn.firstChild;
+        pTag.style.color = "#5f7cff";
+        
+    });
+});
+premiumBtns.forEach((btn) => {
+    btn.addEventListener('mouseout', () => {
+        let pTag = btn.firstChild;
+        pTag.style.color = "rgb(72, 72, 72)";
+        
+    });
+});
 
 function f1(e)
 {
@@ -75,6 +109,7 @@ function f9(e)
     textarea.style.transform = "capitalize";
     textarea.value = "";
     inputNum.value = "16";
+    updateCounter();
 }
 
 function f10(e)
@@ -83,12 +118,16 @@ function f10(e)
     textarea.style.color = value;
 }
 
+document.querySelector(".my-grammarly").onclick = function () {
+        location.href = "http://localhost:8000/home";
+};
+
 window.addEventListener("load", () => {
     textarea.value = "";
 })
 
 let switchMode = document.querySelector('.dark-mode');
-let details = document.querySelector('.details')
+let details = document.querySelector('#mode-details')
 let sun = document.querySelector(".fa-sun");
 let moon = document.querySelector(".fa-moon");
 let body = document.querySelector("body");
@@ -133,9 +172,9 @@ switchMode.addEventListener('click', () => {
         title.style.background = "#4C4C4C";
         title.style.color = "#fff";
         saveBtn.classList.add("btnsave");
+        totalChars.style.color = "#fff";
     }
-    else
-    {
+    else {
         moon.classList.remove('hidden');
         sun.classList.add('hidden');
         details.innerHTML = "switch to dark mode";
@@ -158,5 +197,23 @@ switchMode.addEventListener('click', () => {
         title.style.background = "#fff";
         title.style.color = "#000";
         saveBtn.classList.remove("btnsave");
+        totalChars.style.color = "#000";
     }
-})
+});
+
+let chars = 0;
+let totalChars = document.querySelector("#word-count");
+
+const updateCounter = () => {
+    let str = textarea.value;
+
+    const charArr = str.split(' ');
+    chars = charArr.filter(word => word !== ' ').length;
+    chars = charArr.filter(word => word !== '').length;
+    
+    totalChars.innerHTML = chars + " " + "Word(s)";
+    
+
+};
+textarea.addEventListener('keyup', () => updateCounter());
+
