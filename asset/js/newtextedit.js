@@ -121,6 +121,9 @@ function f10(e)
 document.querySelector(".my-grammarly").onclick = function () {
         location.href = "http://localhost:8000/home";
 };
+document.querySelector("#new-doc").onclick = () => {
+    location.href = "http://localhost:8000/texteditor";
+}
 
 window.addEventListener("load", () => {
     textarea.value = "";
